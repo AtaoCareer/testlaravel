@@ -11,11 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('big/{id}', function ($id) {
+    return view('welcome', compact('id'));
 });
 Route::get('test', 'TestController@test');
-
+Route::get('git', function(){
+	echo "1111";
+});
 
 //-------------------------------------------------------------------------------------
 //-----------------------------------正式路由----------------------------------------------
